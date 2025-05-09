@@ -36,6 +36,10 @@ class FirebirdConnector extends Connector implements ConnectorInterface
             trigger_error('Cannot connect to Firebird Database, no host or database supplied');
         }
 
+        if (isset($dsn)) {
+            return $dsn;
+        }
+
         $dsn = "firebird:dbname={$host}";
 
         if (isset($port)) {
