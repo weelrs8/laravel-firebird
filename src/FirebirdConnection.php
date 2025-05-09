@@ -18,7 +18,7 @@ class FirebirdConnection extends DatabaseConnection
      */
     protected function getDefaultQueryGrammar()
     {
-        return new FirebirdQueryGrammar;
+        return new FirebirdQueryGrammar($this);
     }
 
     /**
